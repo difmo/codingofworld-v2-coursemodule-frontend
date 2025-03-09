@@ -2,7 +2,7 @@ import axios from 'axios';
 
 export const getCourses = (category) => {
   return axios
-    .get(`http://localhost:3000/course/browse/${category}`)
+    .get(`https://codingofworldv2-coursemodule-backend.onrender.com/course/browse/${category}`)
     .then((res) => {
       // console.log(res.data.data);
       return res.data.data;

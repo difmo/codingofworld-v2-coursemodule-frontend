@@ -68,7 +68,7 @@ export const ProfileForm = () => {
 
           //patch req
           axios
-            .put(`http://localhost:3000/user/${user._id}`, {
+            .put(`https://codingofworldv2-coursemodule-backend.onrender.com/user/${user._id}`, {
               ...user,
               profile_picture: downloadURL,
             })

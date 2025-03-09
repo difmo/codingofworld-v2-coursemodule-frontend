@@ -63,7 +63,7 @@ export const NotesSideBar = () => {
 
   const getNoteFromDb = () => {
     axios
-      .get(`http://localhost:3000/notes/get/${user._id}/${videoId}`)
+      .get(`https://codingofworldv2-coursemodule-backend.onrender.com/notes/get/${user._id}/${videoId}`)
       .then((res) => {
         return res.data.data;
       })
@@ -86,7 +86,7 @@ export const NotesSideBar = () => {
   const saveIntoDB = () => {
     return axios
       .put(
-        `http://localhost:3000/notes/patch/${user._id}/${videoId}`,
+        `https://codingofworldv2-coursemodule-backend.onrender.com/notes/patch/${user._id}/${videoId}`,
         {
           content: newEdit,
         },

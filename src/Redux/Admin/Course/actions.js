@@ -70,7 +70,7 @@ export const getAllVideosPCFailure = () => {
 export const fetchAllCourses = () => (dispatch) => {
   dispatch(getAllCoursesReq());
   return axios
-    .get('http://localhost:3000/course/all')
+    .get('https://codingofworldv2-coursemodule-backend.onrender.com/course/all')
     .then((res) => {
       dispatch(getAllCoursesSuccess(res.data.data));
     })
@@ -83,7 +83,7 @@ export const fetchAllCourses = () => (dispatch) => {
 export const fetchAllVideosParticularCourse = (courseId) => (dispatch) => {
   dispatch(getAllVideosPCReq());
   return axios
-    .get(`http://localhost:3000/video/${courseId}/videos`)
+    .get(`https://codingofworldv2-coursemodule-backend.onrender.com/video/${courseId}/videos`)
     .then((res) => {
       dispatch(getAllVideosPCSuccess(res.data.data));
     })
@@ -97,7 +97,7 @@ export const addCourse = (payload) => (dispatch) => {
   dispatch(addCourseRequest());
 
   return axios
-    .post('http://localhost:3000/course/addcourse', payload)
+    .post('https://codingofworldv2-coursemodule-backend.onrender.com/course/addcourse', payload)
     .then((res) => {
       dispatch(addCourseSuccess());
       console.log(res);

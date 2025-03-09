@@ -56,7 +56,7 @@ function Searchbar() {
 
   React.useEffect(() => {
     axios
-      .get('http://localhost:3000/course/all')
+      .get('https://codingofworldv2-coursemodule-backend.onrender.com/course/all')
       .then((res) => setCourses(res.data.data))
       .catch((err) => console.log('Error Occured', err));
   }, []);

@@ -74,7 +74,7 @@ export const getVideos = (courseId) => (dispatch) => {
   dispatch(getVideosRequest());
 
   return axios
-    .get(`http://localhost:3000/video/${courseId}/videos`)
+    .get(`https://codingofworldv2-coursemodule-backend.onrender.com/video/${courseId}/videos`)
     .then((res) => dispatch(getVideosSuccess(res.data.data)))
     .catch((err) => {
       dispatch(getVideosFailure());
@@ -86,7 +86,7 @@ export const getCourseName = (courseId) => (dispatch) => {
   dispatch(getCourseNameRequest());
 
   return axios
-    .get(`http://localhost:3000/course/${courseId}`)
+    .get(`https://codingofworldv2-coursemodule-backend.onrender.com/course/${courseId}`)
     .then((res) => dispatch(getCourseNameSuccess(res.data.data)))
     .catch((err) => {
       dispatch(getCourseNameFailure());

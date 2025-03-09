@@ -46,7 +46,7 @@ const CoursesList = () => {
 
   const getData = (variables) => {
     axios
-      .post('http://localhost:3000/course/getCourses', variables)
+      .post('https://codingofworldv2-coursemodule-backend.onrender.com/course/getCourses', variables)
       .then((res) => {
         // console.log(res.data);
         setData(res.data.data);
@@ -72,7 +72,7 @@ const CoursesList = () => {
 
   const handleClick = (id) => {
     axios
-      .get(`http://localhost:3000/course/${id}`)
+      .get(`https://codingofworldv2-coursemodule-backend.onrender.com/course/${id}`)
       .then((res) => {
         const { category, course_name } = res.data.data;
         // console.log(category, course_name);
