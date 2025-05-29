@@ -14,10 +14,12 @@ import { EditProfile } from '../Pages/EditProfile/EditProfile';
 import SignupPage from '../Pages/SignupPage';
 import CategoryCoursesPage from '../Pages/CategoryCoursesPage/CategoryCoursesPage';
 import { StudentsList } from '../Pages/AdminCoursePage/StudentsList';
+import RouteSync from '../RouteSync';
 
 const Routes = () => {
   return (
     <div>
+      <RouteSync />
       <Switch>
         <Route exact path="/">
           <Home />
